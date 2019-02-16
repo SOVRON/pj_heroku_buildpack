@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "-----> Creating static directory"
+STATIC_DIR="/app/static"
+mkdir $STATIC_DIR
+
+# Verify static dir was created
+if [ -d $STATIC_DIR ]; then
+    echo "-----> $STATIC_DIR directory created successfully"
+else
+    echo "-----> $STATIC_DIR directory failed to create successfully..."
+fi
