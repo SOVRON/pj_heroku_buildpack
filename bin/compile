@@ -2,11 +2,20 @@
 
 echo "-----> Creating static directory"
 STATIC_DIR="/app/static"
+STATICFILES_DIR="/app/staticfiles"
 mkdir $STATIC_DIR
+mkdir $STATICFILES_DIR
 
 # Verify static dir was created
 if [ -d $STATIC_DIR ]; then
     echo "-----> $STATIC_DIR directory created successfully"
 else
     echo "-----> $STATIC_DIR directory failed to create successfully..."
+fi
+
+# Verify staticfiles dir was created
+if [ -d $STATICFILES_DIR ]; then
+    echo "-----> $STATICFILES_DIR directory created successfully"
+else
+    echo "-----> $STATICFILES_DIR directory failed to create successfully..."
 fi
